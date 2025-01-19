@@ -1,9 +1,10 @@
 function checkAnswer() {
     const correctAnswer = "4";
-    const userAnswer = document.querySelector('input[name="quiz"]:checked');
+    const anyAnswer = document.querySelector('input[name="quiz"]:checked');
     const feedback = document.getElementById("feedback");
-    if (userAnswer) {
-        if (userAnswer.value === correctAnswer) {
+    if (anyAnswer) {
+        let userAnswer = anyAnswer.value;
+        if (userAnswer === correctAnswer) {
             feedback.textContent = "Correct! Well done.";
             feedback.style.color = "green";
         } else {
